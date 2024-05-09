@@ -1,0 +1,26 @@
+.detail_title {
+    background-color: yellow;
+    width: 70%;
+    margin-top: 5%;
+    margin: 0 auto;
+}
+
+.detail_main {
+    background-Color: lime;
+    width: 70%;
+    height: 45vh;
+    margin: auto;
+}
+
+.detail_image {
+    float: left;
+    width: 60%;
+}
+
+.detail_fund {
+    float: left;
+    background-color: pink;
+    width: 35%;
+    height: 45vh;
+    margin-left: 5%;
+}
