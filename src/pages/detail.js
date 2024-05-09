@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 //import image1 from '../image/img1.jpg'
 import './detail.css';
