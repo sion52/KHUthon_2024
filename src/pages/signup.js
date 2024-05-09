@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-function Login() {
+function Signup({ onSignup }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
 
   function handleUsernameChange(e) {
     setUsername(e.target.value);
@@ -13,36 +12,24 @@ function Login() {
     setPassword(e.target.value);
   };
 
+  function onSignup(username, password) {
+    // 여기에서 회원가입 처리 로직을 작성합니다.
+    alert(`회원가입 성공! 사용자 이름: ${username}, 비밀번호: ${password}`);
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
-    // 로그인 처리 로직
-    if (username === 'admin' && password === 'password') {
-      setLoggedIn(true);
-    } else {
-      alert('로그인 실패');
-    }
+    // 회원가입 처리 로직
+    onSignup(username, password);
   };
-
-  function handleLogout() {
-    setLoggedIn(false);
-  };
-
-  if (loggedIn) {
-    return (
-      <div>
-        <p>로그인 성공!</p>
-        <button onClick={handleLogout}>로그아웃</button>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" placeholder="사용자 이름" value={username} onChange={handleUsernameChange} />
       <input type="password" placeholder="비밀번호" value={password} onChange={handlePasswordChange} />
-      <button type="submit">로그인</button>
+      <button type="submit">회원가입</button>
     </form>
   );
 };
 
-export default Login;
+export default Signup;

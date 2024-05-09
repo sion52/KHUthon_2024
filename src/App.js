@@ -5,6 +5,7 @@ import CheckoutPage from './pages/pay';
 import { SuccessPage } from './pages/success';
 import { FailPage } from './pages/fail';
 import Login from './pages/login';
+import Signup from './pages/signup';
 
 function App() {
   return(
@@ -15,6 +16,7 @@ function App() {
         <Route path= '/pay/success' element= {<SuccessPage />} />
         <Route path= '/pay/fail' element= {<FailPage />} />
         <Route path= '/login' element= {<Login />} />
+        <Route path= '/login/signup' element= {<Signup />} />
       </Routes>
     </BrowserRouter>
   );
