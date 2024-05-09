@@ -14,11 +14,7 @@ function Header(props) {
 function Image() {
   return(
     <>
-      <div style={{
-        backgroundColor: 'green',
-        width: '100%',
-        height: '45vh',
-      }}>
+      <div className='detail_imagebox'>
         <img
           src= "../image/img1.jpg"
           alt= "image"
@@ -49,13 +45,13 @@ function Fund(props) {
         <h3 style={{display: "inline"}}>{props.participants}명</h3>
       </div>
       <div>
-        <Link to='/pay'>펀딩 하기</Link>
+        <Link to='/pay'><button className='button_fund'>펀딩 하기</button></Link>
         <button onClick={function() {
           //로그인 확인 기능 구현하기
           alert('관심 상품으로 표시했습니다');
-        }}>❤️</button>
+        }} className='button_like'>❤︎</button>
       </div>
-      <div><button>기업 정보 더보기</button></div>{/*기업페이지로 이동하기*/}
+      <div><button className='button_about'>기업 정보 더보기</button></div>{/*기업페이지로 이동하기*/}
     </>
   )
 }

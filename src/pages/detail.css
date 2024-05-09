@@ -6,7 +6,7 @@
 }
 
 .detail_main {
-    background-Color: lime;
+    /* background-Color: lime; */
     width: 70%;
     height: 45vh;
     margin: auto;
@@ -23,4 +23,70 @@
     width: 35%;
     height: 45vh;
     margin-left: 5%;
+}
+
+.detail_imagebox {
+    background-Color: rgb(236, 235, 235);
+    width: 100%;
+    height: 45vh;
+}
+
+.button_fund {
+    background-color: #18936c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+.button_fund:hover {
+    background-color: #10694d;
+}
+.button_fund:active {
+    background-color: #11654a;
+}
+
+.button_like {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+.button_like:hover {
+    background-color: #0056b3;
+}
+.button_like:active {
+    background-color: #003a80;
+}
+
+.button_about {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+.button_about:hover {
+    background-color: #dedede;
+}
+.button_about:active {
+    background-color: #c9c9c9;
 }
