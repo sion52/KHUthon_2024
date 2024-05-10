@@ -142,3 +142,21 @@ input[id="like"] {
     margin: 0;
     display: inline-block;
 }
+
+.pay_btn {
+    background-color: #3183F6;
+    width: 96%;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+    margin: 20px 2% 10px 2%;
+}
+.pay_btn:hover {
+    background-color: #266bcb;
+}

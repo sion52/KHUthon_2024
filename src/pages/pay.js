@@ -61,7 +61,7 @@ export default function CheckoutPage() {
     try {
       await paymentWidget?.requestPayment({
         orderId: nanoid(),
-        orderName: "토스 티셔츠 외 2건",
+        orderName: "환경 펀딩 복권",
         customerName: "김토스",
         customerEmail: "customer123@gmail.com",
         customerMobilePhone: "01012341234",
@@ -79,7 +79,7 @@ export default function CheckoutPage() {
       <div id="payment-widget" />
       <div id="agreement" />
       {/* 결제하기 버튼 */}
-      <button onClick={handlePaymentRequest}>결제하기</button>
+      <button onClick={handlePaymentRequest} className="pay_btn">결제하기</button>
     </div>
   );
 }
