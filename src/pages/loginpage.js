@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import './loginpage.css'
 
-const data ={
-  id: 'kang1234@gmail.com',
-  password: 'dddd'
-}
+
 
 function LoginPage({setLoginState, setLogurlState}){
     const [id, setId] = useState('');
@@ -23,17 +20,28 @@ function LoginPage({setLoginState, setLogurlState}){
 
     const handleSubmitChange = (e) => {
       e.preventDefault();
-      if (id === data.id && password === data.password) {
-        alert('로그인 성공');
-        // 로그인 성공 시 로컬 스토리지에 로그인 상태를 저장
-        localStorage.setItem('cookie', id);
-        localStorage.setItem('url', '/user');
-        setLoginState(id); // 로그인 상태 변경
-        setLogurlState('/user');
-      } else {
-        alert('로그인 실패');
-        // 로그인 실패 시에는 setLoginState를 호출하지 않음
-      }
+
+      fetch('https://api.google.com/user', {
+        method: 'post',
+        body: JSON.stringify({
+            email: id,
+            password: password
+        })
+      })
+      .then(res => res.json())
+      .then(res => {
+        if (res.success) {
+            alert("로그인 성공");
+            localStorage.setItem('cookie', id);
+            localStorage.setItem('url', '/user');
+            setLoginState(id); // 로그인 상태 변경
+            setLogurlState('/user');
+        } else{
+          alert('로그인 실패')
+        }
+      })
+
+
     };
 
     return (

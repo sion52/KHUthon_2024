@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import data from './data.js';
 import './mainpage.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Posts({ post }) {
+function Posts({ post,index }) {
   return (
     <Card style={{ width: '18rem' }} className='Card'>
       <Card.Img variant="top" src="holder.js/100px180" />
@@ -14,7 +13,7 @@ function Posts({ post }) {
         <Card.Text>
           {post.data}
         </Card.Text>
-        <Link to={`/detail/${post.id}`}>
+        <Link to={`/detail/${index}`}>
           <Button variant="primary">자세히 보기</Button>
         </Link>
       </Card.Body>
@@ -29,9 +28,13 @@ function Mainpage() {
 
   useEffect(() => {
     // data.js에서 데이터 가져와서 상태 업데이트
-    SetNewPosts(data);
-    SetRecommendPosts(data);
-  }, []); // 컴포넌트가 처음 렌더링될 때 한 번만 실행됨
+    fetch('url')
+      .then(res => res.json()) // .json() 메서드 호출
+      .then(data => {
+        SetNewPosts(data); // 첫 번째 then 메서드에서 처리
+        SetRecommendPosts(data); // 첫 번째 then 메서드에서 처리
+      });
+  }, []);
 
   let MainNewPosts = [];
   let MainRecommendPosts = [];
@@ -55,7 +58,7 @@ function Mainpage() {
       </div>
 
       <div className="box">
-        {MainNewPosts.map((post, index) => <Posts key={index} post={post} />)}
+        {MainNewPosts.map((post, index) => <Posts index={index} post={post} />)}
       </div>
 
       <div className='Posts'>
@@ -63,7 +66,7 @@ function Mainpage() {
       </div>
 
       <div className="box">
-        {MainRecommendPosts.map((post, index) => <Posts key={index} post={post} />)}
+        {MainRecommendPosts.map((post, index) => <Posts index={index} post={post} />)}
       </div>
     </>
   );
