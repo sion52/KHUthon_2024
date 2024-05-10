@@ -11,8 +11,9 @@ import CheckoutPage from './pages/pay';
 import { SuccessPage } from './pages/success';
 import { FailPage } from './pages/fail';
 import React, { useEffect, useState } from 'react';
-import './App.css'
-import UserPage from './pages/user.js'
+import './App.css';
+import UserPage from './pages/user.js';
+import AboutPage from './pages/about.js';
 
 function App() {
   const [loginState, setLoginState] = useState('Login'); //로그인 상태
@@ -43,7 +44,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Mainpage/>} />
         <Route path='/funding' element={<FundingPage/>} />
-        <Route path='/about' element={<div>우리 사이트에 관하여...</div>} />
+        <Route path='/about' element={<AboutPage />} />
         <Route path='/login' element={<LoginPage setLoginState={setLoginState} setLogurlState={setLogurlState}/>} />
         <Route path='/detail/:id' element={<Detail />} />
         <Route path= '/pay' element= {<CheckoutPage />} />
