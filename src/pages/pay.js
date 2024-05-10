@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { loadPaymentWidget, ANONYMOUS } from "@tosspayments/payment-widget-sdk";
 import { nanoid } from "nanoid";
+import './detail.css';
 
 // 구매자의 고유 아이디를 불러와서 customerKey로 설정하세요.
 // 이메일・전화번호와 같이 유추가 가능한 값은 안전하지 않습니다.
@@ -13,12 +14,13 @@ export default function CheckoutPage() {
   const paymentMethodsWidgetRef = useRef(null);
   const [price, setPrice] = useState(50_000);
 
-  useEffect(() => {
-    const fetchPaymentWidget = async () => {
+  useEffect(()=> { //렌더링 될 때 실행
+    const fetchPaymentWidget= async ()=> {
       try {
-        const loadedWidget = await loadPaymentWidget(widgetClientKey, customerKey);
+        const loadedWidget= await loadPaymentWidget(widgetClientKey, customerKey);
         setPaymentWidget(loadedWidget);
-      } catch (error) {
+      } 
+      catch(error) { //예외 발생
         console.error("Error fetching payment widget:", error);
       }
     };
@@ -26,12 +28,12 @@ export default function CheckoutPage() {
     fetchPaymentWidget();
   }, []);
 
-  useEffect(() => {
+  useEffect(()=> {
     if (paymentWidget == null) {
       return;
     }
 
-    const paymentMethodsWidget = paymentWidget.renderPaymentMethods(
+    const paymentMethodsWidget= paymentWidget.renderPaymentMethods(
       "#payment-widget",
       { value: price },
       { variantKey: "DEFAULT" }
@@ -42,10 +44,10 @@ export default function CheckoutPage() {
       { variantKey: "AGREEMENT" }
     );
 
-    paymentMethodsWidgetRef.current = paymentMethodsWidget;
+    paymentMethodsWidgetRef.current= paymentMethodsWidget;
   }, [paymentWidget, price]);
 
-  useEffect(() => {
+  useEffect(()=> {
     const paymentMethodsWidget = paymentMethodsWidgetRef.current;
 
     if (paymentMethodsWidget == null) {
@@ -61,7 +63,7 @@ export default function CheckoutPage() {
     try {
       await paymentWidget?.requestPayment({
         orderId: nanoid(),
-        orderName: "토스 티셔츠 외 2건",
+        orderName: "환경을 위한 ESG 펀딩",
         customerName: "김토스",
         customerEmail: "customer123@gmail.com",
         customerMobilePhone: "01012341234",
@@ -79,7 +81,7 @@ export default function CheckoutPage() {
       <div id="payment-widget" />
       <div id="agreement" />
       {/* 결제하기 버튼 */}
-      <button onClick={handlePaymentRequest}>결제하기</button>
+      <button onClick={handlePaymentRequest} class="button_pay">결제하기</button>
     </div>
   );
 }

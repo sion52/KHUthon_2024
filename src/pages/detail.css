@@ -116,3 +116,24 @@
     margin: 0;
     display: inline-block;
 }
+
+.button_pay {
+    background-color: #3183F6;
+    width: 96%;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+    margin: 0 2% 0 2%;
+}
+.button_pay:hover {
+    background-color: #2d77e0;
+}
+.button_pay:active {
+    background-color: #3183F6;
+}
