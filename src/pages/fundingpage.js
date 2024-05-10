@@ -11,6 +11,9 @@ function FundingPage() {
 
   return (
     <>
+      <div className='Posts'>
+        <p>모든 펀딩 &gt;</p>
+      </div>
       <div className='Fundingbox'>
         {fundingData.map((post, index) => <FundingPosts post={post} index={index} />)}
       </div>
@@ -23,9 +26,9 @@ function FundingPosts({ post }) {
     <Card style={{ width: '18rem' }} id='Fundingcard'>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>{post.title}</Card.Title>
+        <Card.Title>{post.name}</Card.Title>
         <Card.Text>
-          {post.shortExplain}
+          {post.data}
         </Card.Text>
         <Link to={`/detail/${post.id}`}>
           <Button variant="primary">자세히 보기</Button>
