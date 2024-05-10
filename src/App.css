@@ -37,14 +37,13 @@
 
 .sam {
     font-family: 'WavvePADO-Regular';
-    margin: 0;
 }
 
 .na {
     font-family: 'Freesentation2';
-    margin: 0 5%;
+    /* margin: 0 5%; */
 }
 .nam {
     font-family: 'Freesentation2';
-    margin: 0 5% 0 350px;
+    /* margin: 0 5% 0 100%; */
 }
