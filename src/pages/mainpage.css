@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Freesentation2';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2');
     font-style: normal;
 }
 
@@ -40,7 +40,10 @@ p {
 
 .card{
     float: left;
+    background-color: #F3F3F3;
     margin: 0 10px;
     border-color: white;
-    box-shadow: 1px 3px 10px 0px #b8b8b863;
+    border-radius: 20px;
+    padding: 10px;
+    /* box-shadow: 1px 3px 10px 0px #b8b8b863; */
 }

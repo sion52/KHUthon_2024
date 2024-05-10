@@ -30,7 +30,7 @@ function App() {
         <Container>
         <Navbar.Brand href="/home"><p className='sam'>SAMSAMOO</p></Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/home" className='na'>Home</Nav.Link>
+          <Nav.Link href="/home" className='nam'>Home</Nav.Link>
           <Nav.Link href="/funding" className='na'>Funding</Nav.Link>
           <Nav.Link href="/about" className='na'>About</Nav.Link>
         </Nav>
