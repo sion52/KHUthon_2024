@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import {Route, Routes, Link} from 'react-router-dom';
 import Mainpage from './pages/mainpage.js'
 import FundingPage from './pages/fundingpage.js'
@@ -35,6 +37,15 @@ function App() {
           <Nav.Link href="/funding" className='na'>Funding</Nav.Link>
           <Nav.Link href="/about" className='na'>About</Nav.Link>
         </Nav>
+        <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+        </Form>
         <Nav>
         <Nav.Link href={logurlState} className='na'>{loginState}</Nav.Link>
         </Nav>

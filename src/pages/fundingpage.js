@@ -37,7 +37,7 @@ function FundingPosts({ post, index }) {
         <Card.Text>
           {post.data}
         </Card.Text>
-        <Link to={`/detail/${index}`}>
+        <Link to={`/detail/${index}`} state={index}>
           <Button variant="primary">자세히 보기</Button>
         </Link>
       </Card.Body>

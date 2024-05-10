@@ -68,7 +68,7 @@ function Detail() {
 
   useEffect(() => {
     // data.js에서 데이터 가져와서 상태 업데이트
-    fetch('url')
+    fetch(`/detail/${id}`)
       .then(res => res.json()) // .json() 메서드 호출
       .then(data => {
         SetPosts(data); // 첫 번째 then 메서드에서 처리 // 첫 번째 then 메서드에서 처리
