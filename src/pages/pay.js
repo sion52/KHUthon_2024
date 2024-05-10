@@ -77,13 +77,14 @@ export default function CheckoutPage() {
 
   return (
     <div>
-      {/* 상품 정보 */}
-      <div>
-        DETAIL TITLE
-      </div>
       {/* 결제 UI, 이용약관 UI 영역 */}
       <div id="payment-widget" />
       <div id="agreement" />
+
+      {/* 상품 정보 */}
+      <h3 className="name">ESG 펀딩</h3>
+      <h1 className="price">{price}원</h1>
+
       {/* 결제하기 버튼 */}
       <button onClick={handlePaymentRequest} class="button_pay">결제하기</button>
     </div>
