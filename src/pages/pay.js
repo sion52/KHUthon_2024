@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { loadPaymentWidget, ANONYMOUS } from "@tosspayments/payment-widget-sdk";
+import { loadPaymentWidget } from "@tosspayments/payment-widget-sdk";
 import { nanoid } from "nanoid";
 import './detail.css';
 
@@ -77,6 +77,10 @@ export default function CheckoutPage() {
 
   return (
     <div>
+      {/* 상품 정보 */}
+      <div>
+        DETAIL TITLE
+      </div>
       {/* 결제 UI, 이용약관 UI 영역 */}
       <div id="payment-widget" />
       <div id="agreement" />

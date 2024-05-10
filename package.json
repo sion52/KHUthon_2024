@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@portone/browser-sdk": "^0.0.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tosspayments/brandpay-sdk": "^1.5.2",
     "@tosspayments/payment-widget-sdk": "^0.10.2",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
