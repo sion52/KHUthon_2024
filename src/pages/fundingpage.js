@@ -12,7 +12,7 @@ function FundingPage() {
   return (
     <>
       <div className='Posts'>
-        <p>모든 펀딩 &gt;</p>
+        <p>&#x1F4CC;모든 펀딩 &gt;</p>
       </div>
       <div className='Fundingbox'>
         {fundingData.map((post, index) => <FundingPosts post={post} index={index} />)}
