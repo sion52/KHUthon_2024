@@ -11,11 +11,12 @@ import CheckoutPage from './pages/pay';
 import { SuccessPage } from './pages/success';
 import { FailPage } from './pages/fail';
 import React, { useEffect, useState } from 'react';
+import './App.css'
 
 
 function App() {
-  const [loginState, setLoginState] = useState('Login'); 
-  const [logurlState, setLogurlState]= useState('/login');
+  const [loginState, setLoginState] = useState('Login'); //로그인 상태
+  const [logurlState, setLogurlState]= useState('/login'); //로그인 주소?
 
   useEffect(()=> {
     setLoginState(localStorage.getItem('cookie'));
@@ -27,7 +28,7 @@ function App() {
   
       <Navbar bg="light" data-bs-theme="light">
         <Container>
-        <Navbar.Brand href="/home">SAMSAMOO</Navbar.Brand>
+        <Navbar.Brand href="/home"><p className='sam'>SAMSAMOO</p></Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="/home">Home</Nav.Link>
           <Nav.Link href="/funding">Funding</Nav.Link>
