@@ -4,6 +4,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Freesentation2';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+    font-style: normal;
+}
+
 p {
     margin: 0;
 }
@@ -17,6 +23,7 @@ p {
 }
 
 .box {
+    font-family: 'Freesentation2';
     margin-top: 5px;
     background-color: #f8f9fa00;
     display: flex;

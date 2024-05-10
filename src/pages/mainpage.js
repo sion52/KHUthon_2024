@@ -36,7 +36,7 @@ function Mainpage() {
   return (
     <>
       <div className='Posts'>
-        <p>신규기업 &gt;</p>
+        <p>신규 기업 &gt;</p>
       </div>
 
       <div className="box">
@@ -44,7 +44,7 @@ function Mainpage() {
       </div>
 
       <div className='Posts'>
-        <p>추천기업 &gt;</p>
+        <p>추천 기업 &gt;</p>
       </div>
 
       <div className="box">

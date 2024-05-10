@@ -30,12 +30,12 @@ function App() {
         <Container>
         <Navbar.Brand href="/home"><p className='sam'>SAMSAMOO</p></Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/home">Home</Nav.Link>
-          <Nav.Link href="/funding">Funding</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
+          <Nav.Link href="/home" className='na'>Home</Nav.Link>
+          <Nav.Link href="/funding" className='na'>Funding</Nav.Link>
+          <Nav.Link href="/about" className='na'>About</Nav.Link>
         </Nav>
         <Nav>
-        <Nav.Link href={logurlState}>{loginState}</Nav.Link>
+        <Nav.Link href={logurlState} className='na'>{loginState}</Nav.Link>
         </Nav>
         </Container>
       </Navbar>

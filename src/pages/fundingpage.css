@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'Freesentation2';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+  font-style: normal;
+}
+
 .Fundingbox{
+    font-family: 'Freesentation2';
     margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
