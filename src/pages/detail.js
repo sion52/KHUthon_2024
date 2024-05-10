@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 function Header({title}) {
   return(
     <>
-      <h1 style={{}}>{title}</h1>
+      <h1>{title}</h1>
     </>
   )
 }
@@ -50,7 +50,7 @@ function Fund(props) {
       <Link to='/pay'><button className='button_fund'>펀딩 하기</button></Link>
       <div className='btn_'>
         <input type='checkbox' id='like' />
-        <label for='like'>❤︎</label>
+        <label for='like'>♥</label>
         {/* <button onClick={function() {
           //로그인 확인 기능 구현하기
           alert('관심 상품으로 표시했습니다');
@@ -94,7 +94,7 @@ function Detail() {
         </div>
 
 
-        <div>{NewPosts[id].shortExplain}</div>
+        <div className='post'>{NewPosts[id].shortExplain}</div>
       </div>
 
     </div>
