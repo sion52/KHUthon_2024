@@ -10,9 +10,9 @@ function Posts({ post }) {
     <Card style={{ width: '18rem' }} className='Card'>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>{post.title}</Card.Title>
+        <Card.Title>{post.name}</Card.Title>
         <Card.Text>
-          {post.shortExplain}
+          {post.data}
         </Card.Text>
         <Link to={`/detail/${post.id}`}>
           <Button variant="primary">자세히 보기</Button>
@@ -33,6 +33,21 @@ function Mainpage() {
     SetRecommendPosts(data);
   }, []); // 컴포넌트가 처음 렌더링될 때 한 번만 실행됨
 
+  let MainNewPosts = [];
+  let MainRecommendPosts = [];
+
+  [0, 1, 2, 3].forEach(index => {
+    if (NewPosts[index]) {
+      MainNewPosts.push(NewPosts[index]);
+    }
+  });
+
+  [7, 6, 5, 4].forEach(index => {
+    if (RecommendPosts[index]) {
+      MainRecommendPosts.push(RecommendPosts[index]);
+    }
+  });
+
   return (
     <>
       <div className='Posts'>
@@ -40,7 +55,7 @@ function Mainpage() {
       </div>
 
       <div className="box">
-        {NewPosts.map((post, index) => <Posts key={index} post={post} />)}
+        {MainNewPosts.map((post, index) => <Posts key={index} post={post} />)}
       </div>
 
       <div className='Posts'>
@@ -48,7 +63,7 @@ function Mainpage() {
       </div>
 
       <div className="box">
-        {RecommendPosts.map((post, index) => <Posts key={index} post={post} />)}
+        {MainRecommendPosts.map((post, index) => <Posts key={index} post={post} />)}
       </div>
     </>
   );

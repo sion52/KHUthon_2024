@@ -12,7 +12,7 @@ import { SuccessPage } from './pages/success';
 import { FailPage } from './pages/fail';
 import React, { useEffect, useState } from 'react';
 import './App.css'
-
+import UserPage from './pages/user.js'
 
 function App() {
   const [loginState, setLoginState] = useState('Login'); //로그인 상태
@@ -44,12 +44,12 @@ function App() {
         <Route path='/home' element={<Mainpage/>} />
         <Route path='/funding' element={<FundingPage/>} />
         <Route path='/about' element={<div>우리 사이트에 관하여...</div>} />
-        <Route path='/login' element={<LoginPage setLoginState={setLoginState}/>} />
+        <Route path='/login' element={<LoginPage setLoginState={setLoginState} setLogurlState={setLogurlState}/>} />
         <Route path='/detail/:id' element={<Detail />} />
         <Route path= '/pay' element= {<CheckoutPage />} />
         <Route path= '/pay/success' element= {<SuccessPage />} />
         <Route path= '/pay/fail' element= {<FailPage />} />
-        {/* <Route path='/user' element= {<User />} /> */}
+        <Route path='/user' element= {<UserPage setLoginState={setLoginState} setLogurlState={setLogurlState}/>} /> 
       </Routes>
 
 
